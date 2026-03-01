@@ -17,7 +17,6 @@ fun App() {
 
         Column(
             modifier = Modifier
-                .safeContentPadding()
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {

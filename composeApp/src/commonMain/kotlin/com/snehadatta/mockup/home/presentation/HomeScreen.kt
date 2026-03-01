@@ -34,7 +34,6 @@ fun HomeScreen() {
         Column(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.SpaceBetween,
-            horizontalAlignment = Alignment.CenterHorizontally
         ){
             TopBar(
                 modifier = Modifier.fillMaxWidth(),
