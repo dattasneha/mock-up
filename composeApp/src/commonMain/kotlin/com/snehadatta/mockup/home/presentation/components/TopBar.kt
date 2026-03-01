@@ -52,6 +52,7 @@ fun TopBar(
 ) {
     Box(
         modifier = modifier
+            .fillMaxWidth()
             .clip(RoundedCornerShape(4.dp))
             .height(72.dp)
             .background(
@@ -64,7 +65,6 @@ fun TopBar(
                 color = GoldAccent,
                 shape = RoundedCornerShape(4.dp)
             )
-            .fillMaxWidth()
             .padding(vertical = 4.dp)
             ,
         contentAlignment = Alignment.Center

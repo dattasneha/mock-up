@@ -37,6 +37,7 @@ fun HomeScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ){
             TopBar(
+                modifier = Modifier.fillMaxWidth(),
                 kp = 0,
                 coins = 5000,
                 diamonds = 10,
@@ -240,6 +241,7 @@ fun HomeScreen() {
 
         BottomBar(
             modifier = Modifier
+                .fillMaxWidth()
                 .align(Alignment.BottomCenter)
         )
     }
