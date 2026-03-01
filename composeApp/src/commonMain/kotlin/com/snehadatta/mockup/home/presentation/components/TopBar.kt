@@ -66,7 +66,7 @@ fun TopBar(
                 shape = RoundedCornerShape(4.dp)
             )
             .padding(vertical = 4.dp)
-            ,
+        ,
         contentAlignment = Alignment.Center
 
     ) {
@@ -76,68 +76,68 @@ fun TopBar(
             modifier = Modifier.fillMaxWidth()
                 .padding(horizontal = 10.dp)
         ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier
-                        .padding(2.dp, end = 8.dp)
-                        .background(
-                            brush = Brush.verticalGradient(
-                                listOf(DeepTeal,DarkTeal))
-                        )
-                        .size(44.dp)
-                        .border(
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier
+                    .padding(2.dp, end = 8.dp)
+                    .background(
+                        brush = Brush.verticalGradient(
+                            listOf(DeepTeal,DarkTeal))
+                    )
+                    .size(44.dp)
+                    .border(
                         width = 1.dp,
                         color = PrimaryTeal,
                         shape = RoundedCornerShape(4.dp)
                     )
-                ) {
-                    Image(
-                        painter = painterResource(Res.drawable.Avatar),
-                        contentDescription = "Avatar",
-                        modifier = Modifier
-                            .size(32.dp)
-                            .clip(CircleShape)
-                    )
-                }
-
-
-
-
-                CurrencyItem(
-                    icon = Res.drawable.topbar_icon,
-                    value = kp
-                )
-
-                CurrencyItem(
-                    icon = Res.drawable.topbar_icon,
-                    value = coins
-                )
-
-                CurrencyItem(
-                    icon = Res.drawable.topbar_icon,
-                    value = diamonds
-                )
-
-
-                Spacer(modifier = Modifier.weight(1f))
-
-
+            ) {
                 Image(
-                    painter = painterResource(Res.drawable.FreeCoin),
-                    contentDescription = "Free image",
+                    painter = painterResource(Res.drawable.Avatar),
+                    contentDescription = "Avatar",
                     modifier = Modifier
-                        .size(40.dp)
-                        .clickable(true, onClick = onFreeClick)
+                        .size(32.dp)
+                        .clip(CircleShape)
                 )
-                Spacer(modifier= modifier.width(2.dp))
-                Image(
-                    painter = painterResource(Res.drawable.gold_settings),
-                    contentDescription = "Settings",
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clickable(true, onClick = onSettingsClick)
-                )
+            }
+
+
+
+
+            CurrencyItem(
+                icon = Res.drawable.topbar_icon,
+                value = kp
+            )
+
+            CurrencyItem(
+                icon = Res.drawable.topbar_icon,
+                value = coins
+            )
+
+            CurrencyItem(
+                icon = Res.drawable.topbar_icon,
+                value = diamonds
+            )
+
+
+            Spacer(modifier = Modifier.weight(1f))
+
+
+            Image(
+                painter = painterResource(Res.drawable.FreeCoin),
+                contentDescription = "Free image",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clickable(true, onClick = onFreeClick)
+            )
+            Spacer(modifier= modifier.width(2.dp))
+            Image(
+                painter = painterResource(Res.drawable.gold_settings),
+                contentDescription = "Settings",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clickable(true, onClick = onSettingsClick)
+            )
 
 
         }
@@ -197,13 +197,13 @@ fun CurrencyItem(
 fun GameTopBarPreviewStyled() {
     MaterialTheme {
 
-            TopBar(
-                kp = 0,
-                coins = 5000,
-                diamonds = 10,
-                onFreeClick = {},
-                onSettingsClick = {}
-            )
+        TopBar(
+            kp = 0,
+            coins = 5000,
+            diamonds = 10,
+            onFreeClick = {},
+            onSettingsClick = {}
+        )
 
     }
 }

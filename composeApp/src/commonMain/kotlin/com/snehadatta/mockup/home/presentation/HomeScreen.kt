@@ -1,6 +1,5 @@
 package com.snehadatta.mockup.home.presentation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import com.snehadatta.mockup.home.presentation.components.BottomBar
 import androidx.compose.foundation.layout.Box
@@ -8,25 +7,27 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.snehadatta.mockup.home.presentation.components.HomeScreenTopBar
 import com.snehadatta.mockup.home.presentation.components.TopBar
-import com.snehadatta.mockup.home.presentation.components.TopicRow
-import com.snehadatta.mockup.home.data.model.Topic
-import com.snehadatta.mockup.home.data.model.TopicZone
 import com.snehadatta.mockup.home.presentation.components.TopicColumn
 import com.snehadatta.mockup.ui.theme.MockupTheme
-import myapplication.composeapp.generated.resources.Res
-import myapplication.composeapp.generated.resources.kwalaexpress2
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    viewModel: HomeViewModel = koinViewModel()
+) {
+    val uiState by viewModel.uiState.collectAsState()
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -34,6 +35,7 @@ fun HomeScreen() {
         Column(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.SpaceBetween,
+            horizontalAlignment = Alignment.CenterHorizontally
         ){
             TopBar(
                 modifier = Modifier.fillMaxWidth(),
@@ -46,196 +48,33 @@ fun HomeScreen() {
             HomeScreenTopBar(
                 modifier = Modifier.padding(vertical = 4.dp)
             )
-            TopicColumn(
-                topicZone = listOf(
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
-                    TopicZone(
-                        title = "Most played topics",
-                        topics = listOf(
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            ),
-                            Topic(
-                                description = "Indian ott",
-                                imageRes = Res.drawable.kwalaexpress2
-                            )
-                        )
-                    ),
 
-                )
-
-            )
-
-        }
-
-
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(vertical = 90.dp)
-        ) {
-
+            when {
+                uiState.isLoading -> {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        CircularProgressIndicator()
+                    }
+                }
+                uiState.error != null -> {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = uiState.error ?: "Unknown error",
+                            color = Color.Red
+                        )
+                    }
+                }
+                else -> {
+                    TopicColumn(
+                        topicZone = uiState.topicZones
+                    )
+                }
+            }
         }
 
         BottomBar(
