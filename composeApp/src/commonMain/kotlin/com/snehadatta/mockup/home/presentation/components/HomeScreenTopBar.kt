@@ -1,4 +1,4 @@
-package com.snehadatta.mockup.components
+package com.snehadatta.mockup.home.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,13 +7,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -23,12 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.snehadatta.mockup.ui.theme.Blue
+import com.snehadatta.mockup.ui.theme.DarkNavy
+import com.snehadatta.mockup.ui.theme.DeepBlue
 import com.snehadatta.mockup.ui.theme.PrimaryTeal
-import com.snehadatta.mockup.ui.theme.appFontFamily
 import com.snehadatta.mockup.ui.theme.appTypography
 import myapplication.composeapp.generated.resources.Res
 import myapplication.composeapp.generated.resources.dailyquiz
@@ -89,24 +87,26 @@ fun Card(
                 .border(
                     width = 1.5.dp,
                     shape = RoundedCornerShape(1.5.dp),
-                    color = PrimaryTeal
+                    color = Blue
                 )
                 .background(
-                    color = Color.Transparent.copy(alpha = 0.3f)
+                    brush = Brush.linearGradient(
+                        listOf(DarkNavy, DeepBlue)
+                    )
                 )
         ){
             Column (
                 modifier = Modifier
                     .align(Alignment.CenterEnd)
                     .padding(4.dp)
-                    .padding(end= 4.dp),
+                    .padding(end= 2.dp),
                 horizontalAlignment = Alignment.Start,
                 verticalArrangement = Arrangement.SpaceBetween
             ){
                 Text(
                     text = textTop,
                     modifier = Modifier
-                        .padding(top = 4.dp),
+                        .padding(start = 4.dp,top = 4.dp),
                     style = appTypography().labelLarge,
                     color = PrimaryTeal,
                     maxLines = 1,
@@ -117,7 +117,7 @@ fun Card(
                 Text(
                     text = textBottom,
                     modifier = Modifier
-                        .padding(bottom = 4.dp),
+                        .padding(start = 4.dp,bottom = 4.dp),
                     style = appTypography().labelLarge,
                     color = PrimaryTeal,
                     maxLines = 1,

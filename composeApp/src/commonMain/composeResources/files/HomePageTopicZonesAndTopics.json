@@ -1,0 +1,186 @@
+[
+  {
+    "id": -1,
+    "topicZoneName": "Topic of the Day",
+    "topics": [
+      3010
+    ]
+  },
+  {
+    "id": 110,
+    "topicZoneName": "Most Played Topics",
+    "topics": [
+      2806,
+      10009,
+      3003,
+      2635,
+      2314
+    ]
+  },
+  {
+    "id": 1000,
+    "topicZoneName": "I dare you play these topics…",
+    "topics": [
+      10001,
+      2911,
+      10006,
+      2808,
+      2405,
+      10017,
+      10002,
+      10008,
+      3011,
+      10018
+    ]
+  },
+  {
+    "id": 1010,
+    "topicZoneName": "Language Zone",
+    "topics": [
+      2205,
+      2206,
+      2208,
+      2207,
+      2204,
+      2203
+    ]
+  },
+  {
+    "id": 1020,
+    "topicZoneName": "States of India: How much do you know?",
+    "topics": [
+      2636,
+      2623,
+      2604,
+      2632,
+      2631,
+      2606,
+      2629,
+      2622,
+      2612,
+      2620,
+      2611,
+      2614,
+      2619,
+      2625,
+      2624,
+      2628,
+      2617,
+      2607,
+      2609,
+      2618,
+      2621,
+      2610,
+      2626,
+      2635,
+      2615,
+      2605,
+      2616
+    ]
+  },
+  {
+    "id": 1030,
+    "topicZoneName": "From around the world",
+    "topics": [
+      2500,
+      3211,
+      2907,
+      3200,
+      2506,
+      3206,
+      10012,
+      3201
+    ]
+  },
+  {
+    "id": 1040,
+    "topicZoneName": "Nature: Breathe deep, appreciate the wild",
+    "topics": [
+      2807,
+      2800,
+      2803,
+      2806,
+      2801
+    ]
+  },
+  {
+    "id": 1050,
+    "topicZoneName": "Business World: Money talks, everyone listens!",
+    "topics": [
+      2105,
+      2103,
+      2102,
+      2104
+    ]
+  },
+  {
+    "id": 1060,
+    "topicZoneName": "Science & Technology: Know the unknowns!",
+    "topics": [
+      10007,
+      10009,
+      3001,
+      3003,
+      3000,
+      10005,
+      3010,
+      10004,
+      3006,
+      3002
+    ]
+  },
+  {
+    "id": 1070,
+    "topicZoneName": "India: Past & Present",
+    "topics": [
+      2705,
+      2501,
+      3309,
+      2503,
+      2505,
+      3302,
+      3210
+    ]
+  },
+  {
+    "id": 1080,
+    "topicZoneName": "Entertainment..Entertainment..Entertainment!",
+    "topics": [
+      2312,
+      3304,
+      2303,
+      2314,
+      2315,
+      2307,
+      2313,
+      2310,
+      2316
+    ]
+  },
+  {
+    "id": 1090,
+    "topicZoneName": "Sports: Push limits, feel the thrill!",
+    "topics": [
+      3101,
+      3107
+    ]
+  },
+  {
+    "id": 1100,
+    "topicZoneName": "I Love My India!",
+    "topics": [
+      2905,
+      3207,
+      2910,
+      3213,
+      2903,
+      2908,
+      3204,
+      2402,
+      2404,
+      2901,
+      2407,
+      3212
+    ]
+  }
+]

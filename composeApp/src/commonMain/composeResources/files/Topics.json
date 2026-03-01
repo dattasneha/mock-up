@@ -1,0 +1,422 @@
+[
+    {
+        "TopicId": 2102,
+        "TopicName": "World of Startups"
+    },
+    {
+        "TopicId": 2103,
+        "TopicName": "Indian Unicorns"
+    },
+    {
+        "TopicId": 2104,
+        "TopicName": "Finance World"
+    },
+    {
+        "TopicId": 2105,
+        "TopicName": "Business (IN)"
+    },
+    {
+        "TopicId": 2203,
+        "TopicName": "The Tharoor Connection"
+    },
+    {
+        "TopicId": 2204,
+        "TopicName": "Indian Corporate Lingo"
+    },
+    {
+        "TopicId": 2205,
+        "TopicName": "Prepositions"
+    },
+    {
+        "TopicId": 2206,
+        "TopicName": "Confusing Homophones"
+    },
+    {
+        "TopicId": 2207,
+        "TopicName": "Pronunciation Pitfalls"
+    },
+    {
+        "TopicId": 2208,
+        "TopicName": "Spell Bee"
+    },
+    {
+        "TopicId": 2303,
+        "TopicName": "Films (IN)"
+    },
+    {
+        "TopicId": 2307,
+        "TopicName": "Actors (IN)"
+    },
+    {
+        "TopicId": 2310,
+        "TopicName": "Regional Films (IN)"
+    },
+    {
+        "TopicId": 2312,
+        "TopicName": "Anime"
+    },
+    {
+        "TopicId": 2313,
+        "TopicName": "Marvel Disney Universe"
+    },
+    {
+        "TopicId": 2314,
+        "TopicName": "Indian OTTs"
+    },
+    {
+        "TopicId": 2314,
+        "TopicName": "Indian OTTs"
+    },
+    {
+        "TopicId": 2315,
+        "TopicName": "Global OTTs"
+    },
+    {
+        "TopicId": 2316,
+        "TopicName": "Bollywood (IN)"
+    },
+    {
+        "TopicId": 2402,
+        "TopicName": "Mountains & Hills (IN)"
+    },
+    {
+        "TopicId": 2404,
+        "TopicName": "Rivers, Lakes & Oceans (IN)"
+    },
+    {
+        "TopicId": 2405,
+        "TopicName": "Geography: Where  Am I?"
+    },
+    {
+        "TopicId": 2407,
+        "TopicName": "Forests, Sanctuaries, Flora (IN)"
+    },
+    {
+        "TopicId": 2500,
+        "TopicName": "World History"
+    },
+    {
+        "TopicId": 2501,
+        "TopicName": "History (IN)"
+    },
+    {
+        "TopicId": 2503,
+        "TopicName": "Historical Figures (IN)"
+    },
+    {
+        "TopicId": 2505,
+        "TopicName": "Historical Events (IN)"
+    },
+    {
+        "TopicId": 2506,
+        "TopicName": "Ancient History"
+    },
+    {
+        "TopicId": 2604,
+        "TopicName": "Andhra Pradesh & Telangana (IN)"
+    },
+    {
+        "TopicId": 2605,
+        "TopicName": "Arunachal Pradesh (IN)"
+    },
+    {
+        "TopicId": 2606,
+        "TopicName": "Assam (IN)"
+    },
+    {
+        "TopicId": 2607,
+        "TopicName": "Bihar & Jharkhand (IN)"
+    },
+    {
+        "TopicId": 2609,
+        "TopicName": "Goa (IN)"
+    },
+    {
+        "TopicId": 2610,
+        "TopicName": "Gujarat (IN)"
+    },
+    {
+        "TopicId": 2611,
+        "TopicName": "Haryana (IN)"
+    },
+    {
+        "TopicId": 2612,
+        "TopicName": "Himachal Pradesh (IN)"
+    },
+    {
+        "TopicId": 2614,
+        "TopicName": "Karnataka (IN)"
+    },
+    {
+        "TopicId": 2615,
+        "TopicName": "Kerala (IN)"
+    },
+    {
+        "TopicId": 2616,
+        "TopicName": "Madhya Pradesh (IN)"
+    },
+    {
+        "TopicId": 2617,
+        "TopicName": "Maharashtra (IN)"
+    },
+    {
+        "TopicId": 2618,
+        "TopicName": "Manipur (IN)"
+    },
+    {
+        "TopicId": 2619,
+        "TopicName": "Meghalaya (IN)"
+    },
+    {
+        "TopicId": 2620,
+        "TopicName": "Mizoram (IN)"
+    },
+    {
+        "TopicId": 2621,
+        "TopicName": "Nagaland (IN)"
+    },
+    {
+        "TopicId": 2622,
+        "TopicName": "Odisha (IN)"
+    },
+    {
+        "TopicId": 2623,
+        "TopicName": "Punjab (IN)"
+    },
+    {
+        "TopicId": 2624,
+        "TopicName": "Rajasthan (IN)"
+    },
+    {
+        "TopicId": 2625,
+        "TopicName": "Sikkim (IN)"
+    },
+    {
+        "TopicId": 2626,
+        "TopicName": "Tamil Nadu (IN)"
+    },
+    {
+        "TopicId": 2628,
+        "TopicName": "Tripura (IN)"
+    },
+    {
+        "TopicId": 2629,
+        "TopicName": "Uttarakhand & Uttar Pradesh (IN)"
+    },
+    {
+        "TopicId": 2631,
+        "TopicName": "West Bengal (IN)"
+    },
+    {
+        "TopicId": 2632,
+        "TopicName": "Andaman & Nicobar Islands (IN)"
+    },
+    {
+        "TopicId": 2635,
+        "TopicName": "Delhi (IN)"
+    },
+    {
+        "TopicId": 2635,
+        "TopicName": "Delhi (IN)"
+    },
+    {
+        "TopicId": 2636,
+        "TopicName": "Jammu & Kashmir (IN)"
+    },
+    {
+        "TopicId": 2705,
+        "TopicName": "Dance (IN)"
+    },
+    {
+        "TopicId": 2800,
+        "TopicName": "Nature"
+    },
+    {
+        "TopicId": 2801,
+        "TopicName": "Birds"
+    },
+    {
+        "TopicId": 2803,
+        "TopicName": "Animal Kingdom"
+    },
+    {
+        "TopicId": 2806,
+        "TopicName": "Mammals"
+    },
+    {
+        "TopicId": 2806,
+        "TopicName": "Mammals"
+    },
+    {
+        "TopicId": 2807,
+        "TopicName": "Aquatic Species"
+    },
+    {
+        "TopicId": 2808,
+        "TopicName": "Nature: Who am I"
+    },
+    {
+        "TopicId": 2901,
+        "TopicName": "People & Culture (IN)"
+    },
+    {
+        "TopicId": 2903,
+        "TopicName": "Folks & Tribes (IN)"
+    },
+    {
+        "TopicId": 2905,
+        "TopicName": "Costumes (IN)"
+    },
+    {
+        "TopicId": 2907,
+        "TopicName": "World Festivals & Traditions"
+    },
+    {
+        "TopicId": 2908,
+        "TopicName": "Festivals & Traditions (IN)"
+    },
+    {
+        "TopicId": 2910,
+        "TopicName": "Food & Beverages (IN)"
+    },
+    {
+        "TopicId": 2911,
+        "TopicName": "Superstitions & Myths"
+    },
+    {
+        "TopicId": 3000,
+        "TopicName": "Science & Technology"
+    },
+    {
+        "TopicId": 3001,
+        "TopicName": "General Science"
+    },
+    {
+        "TopicId": 3002,
+        "TopicName": "General Physics"
+    },
+    {
+        "TopicId": 3003,
+        "TopicName": "General Chemistry"
+    },
+    {
+        "TopicId": 3003,
+        "TopicName": "General Chemistry"
+    },
+    {
+        "TopicId": 3006,
+        "TopicName": "Computers & Internet"
+    },
+    {
+        "TopicId": 3010,
+        "TopicName": "Scientists & Inventors"
+    },
+    {
+        "TopicId": 3011,
+        "TopicName": "Technology: Who am I"
+    },
+    {
+        "TopicId": 3101,
+        "TopicName": "Cricket"
+    },
+    {
+        "TopicId": 3107,
+        "TopicName": "Sports"
+    },
+    {
+        "TopicId": 3200,
+        "TopicName": "Our World"
+    },
+    {
+        "TopicId": 3201,
+        "TopicName": "Countries"
+    },
+    {
+        "TopicId": 3204,
+        "TopicName": "Cities & Towns (IN)"
+    },
+    {
+        "TopicId": 3206,
+        "TopicName": "Landmarks & Monuments"
+    },
+    {
+        "TopicId": 3207,
+        "TopicName": "Landmarks & Monuments (IN)"
+    },
+    {
+        "TopicId": 3210,
+        "TopicName": "Famous Personalities (IN)"
+    },
+    {
+        "TopicId": 3211,
+        "TopicName": "Places"
+    },
+    {
+        "TopicId": 3212,
+        "TopicName": "Places (IN)"
+    },
+    {
+        "TopicId": 3213,
+        "TopicName": "Fascinating India"
+    },
+    {
+        "TopicId": 3302,
+        "TopicName": "Literature (IN)"
+    },
+    {
+        "TopicId": 3304,
+        "TopicName": "Comics & Manga"
+    },
+    {
+        "TopicId": 3309,
+        "TopicName": "Authors & Poets (IN)"
+    },
+    {
+        "TopicId": 10001,
+        "TopicName": "Longest, Biggest, Largest"
+    },
+    {
+        "TopicId": 10002,
+        "TopicName": "Smallest"
+    },
+    {
+        "TopicId": 10004,
+        "TopicName": "Human Body"
+    },
+    {
+        "TopicId": 10005,
+        "TopicName": "Diseases"
+    },
+    {
+        "TopicId": 10006,
+        "TopicName": "Phobias"
+    },
+    {
+        "TopicId": 10007,
+        "TopicName": "Universe"
+    },
+    {
+        "TopicId": 10008,
+        "TopicName": "-ologies"
+    },
+    {
+        "TopicId": 10009,
+        "TopicName": "Innovations & Inventions"
+    },
+    {
+        "TopicId": 10009,
+        "TopicName": "Innovations & Inventions"
+    },
+    {
+        "TopicId": 10012,
+        "TopicName": "Ancient Egypt"
+    },
+    {
+        "TopicId": 10017,
+        "TopicName": "Death"
+    },
+    {
+        "TopicId": 10018,
+        "TopicName": "Psychology"
+    }
+]

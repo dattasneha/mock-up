@@ -15,6 +15,8 @@ val CyanAccent = Color(0xFF22E4EE)
 val DarkNavy = Color(0xFF002351)
 val DeepBlue = Color(0xFF003C83)
 val Yellow = Color(0xFFE7E81C)
+val Blue = Color(0xFF1F76D3)
+
 val LightColors = lightColorScheme(
     primary = PrimaryTeal,
     secondary = GoldAccent,
