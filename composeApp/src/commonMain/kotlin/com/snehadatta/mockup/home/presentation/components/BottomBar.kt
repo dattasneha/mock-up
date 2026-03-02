@@ -16,9 +16,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.snehadatta.mockup.ui.theme.DarkBrown
 import com.snehadatta.mockup.ui.theme.DeepBrown
+import com.snehadatta.mockup.ui.theme.Dimensions
 import com.snehadatta.mockup.ui.theme.MockupTheme
 import myapplication.composeapp.generated.resources.Kwala_Rocket
 import myapplication.composeapp.generated.resources.Res
@@ -26,6 +26,7 @@ import myapplication.composeapp.generated.resources.gold_cart
 import myapplication.composeapp.generated.resources.gold_home
 import myapplication.composeapp.generated.resources.gold_inventory
 import myapplication.composeapp.generated.resources.gold_leaderboard
+import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -45,58 +46,60 @@ fun BottomBar(
                     listOf(DeepBrown, DarkBrown)
                 )
             )
-            .height(64.dp)
-
+            .height(Dimensions.bottomBarHeight)
     ) {
-
         Row(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 20.dp)
-                .padding(bottom = 4.dp),
+                .padding(horizontal = Dimensions.spacingXLarge)
+                .padding(bottom = Dimensions.spacingSmall),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(
-                painter = painterResource(Res.drawable.gold_inventory),
+            BottomBarIcon(
+                icon = Res.drawable.gold_inventory,
                 contentDescription = "inventory",
-                modifier = Modifier
-                    .clickable(onClick = onInventoryClick)
-                    .size(60.dp)
+                onClick = onInventoryClick
             )
-
-
-            Image(
-                painter = painterResource(Res.drawable.gold_cart),
+            BottomBarIcon(
+                icon = Res.drawable.gold_cart,
                 contentDescription = "cart",
-                modifier = Modifier.clickable(onClick = onCartClick)
-                    .size(60.dp)
+                onClick = onCartClick
             )
-
-
-            Image(
-                painter = painterResource(Res.drawable.gold_home),
+            BottomBarIcon(
+                icon = Res.drawable.gold_home,
                 contentDescription = "home",
-                modifier = Modifier.clickable(onClick = onHomeClick)
-                    .size(60.dp)
-
+                onClick = onHomeClick
             )
-            Image(
-                painter = painterResource(Res.drawable.gold_leaderboard),
+            BottomBarIcon(
+                icon = Res.drawable.gold_leaderboard,
                 contentDescription = "leaderboard",
-                modifier = Modifier.clickable(onClick = onLeaderBoardClick)
-                    .size(60.dp)
+                onClick = onLeaderBoardClick
             )
-            Image(
-                painter = painterResource(Res.drawable.Kwala_Rocket),
+            BottomBarIcon(
+                icon = Res.drawable.Kwala_Rocket,
                 contentDescription = "rocket",
-                modifier = Modifier.clickable(onClick = onRocketClick)
-                    .size(60.dp)
-
+                onClick = onRocketClick
             )
         }
     }
 }
+
+@Composable
+private fun BottomBarIcon(
+    icon: DrawableResource,
+    contentDescription: String,
+    onClick: () -> Unit
+) {
+    Image(
+        painter = painterResource(icon),
+        contentDescription = contentDescription,
+        modifier = Modifier
+            .clickable(onClick = onClick)
+            .size(Dimensions.iconSizeLarge)
+    )
+}
+
 @Preview(showBackground = true)
 @Composable
 fun BottomBarPreview() {

@@ -24,9 +24,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.snehadatta.mockup.home.data.model.Topic
+import com.snehadatta.mockup.ui.theme.Dimensions
 import com.snehadatta.mockup.ui.theme.MockupTheme
 import com.snehadatta.mockup.ui.theme.PrimaryTeal
 import com.snehadatta.mockup.ui.theme.Yellow
@@ -36,6 +38,10 @@ import myapplication.composeapp.generated.resources.kwalaexpress2
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.decodeToImageBitmap
 import org.jetbrains.compose.resources.painterResource
+
+private object TopicRowDefaults {
+    val topicTextSize = 10.sp
+}
 
 @Composable
 fun TopicRow(
@@ -48,7 +54,7 @@ fun TopicRow(
         Text(
             text = title,
             style = appTypography().titleMedium,
-            modifier = Modifier.padding(8.dp),
+            modifier = Modifier.padding(Dimensions.spacingMedium),
             color = Yellow
         )
         LazyRow {
@@ -74,58 +80,29 @@ fun TopicCard(
         imageBitmap = try {
             Res.readBytes("drawable/$topicId.jpg").decodeToImageBitmap()
         } catch (e: Exception) {
-            // Fallback to default image if topic image not found
             null
         }
     }
 
     Box(
         modifier = Modifier
-            .height(120.dp)
-            .width(100.dp),
+            .height(Dimensions.topicCardHeight)
+            .width(Dimensions.topicCardWidth),
     ) {
         Column(
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            if (imageBitmap != null) {
-                Image(
-                    bitmap = imageBitmap!!,
-                    contentDescription = description,
-                    modifier = Modifier
-                        .height(80.dp)
-                        .fillMaxWidth()
-                        .padding(horizontal = 8.dp)
-                        .clip(RoundedCornerShape(1.5.dp))
-                        .border(
-                            width = 1.5.dp,
-                            color = PrimaryTeal,
-                            shape = RoundedCornerShape(1.5.dp)
-                        ),
-                    contentScale = ContentScale.Crop,
-                )
-            } else {
-                // Fallback to default image
-                Image(
-                    painter = painterResource(Res.drawable.kwalaexpress2),
-                    contentDescription = description,
-                    modifier = Modifier
-                        .height(80.dp)
-                        .fillMaxWidth()
-                        .padding(horizontal = 8.dp)
-                        .clip(RoundedCornerShape(1.5.dp))
-                        .border(
-                            width = 1.5.dp,
-                            color = PrimaryTeal,
-                            shape = RoundedCornerShape(1.5.dp)
-                        ),
-                    contentScale = ContentScale.Crop,
-                )
-            }
+            TopicImage(
+                imageBitmap = imageBitmap,
+                description = description
+            )
 
             Text(
                 text = description,
-                modifier = Modifier.padding(8.dp),
+                fontSize = TopicRowDefaults.topicTextSize,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.padding(Dimensions.spacingMedium),
                 style = appTypography().bodySmall.copy(
                     color = Color.White
                 ),
@@ -134,10 +111,40 @@ fun TopicCard(
     }
 }
 
+@Composable
+private fun TopicImage(
+    imageBitmap: ImageBitmap?,
+    description: String
+) {
+    val imageModifier = Modifier
+        .height(Dimensions.topicImageHeight)
+        .fillMaxWidth()
+        .padding(horizontal = Dimensions.spacingMedium)
+        .clip(RoundedCornerShape(Dimensions.cornerRadiusSmall))
+        .border(
+            width = Dimensions.borderWidthMedium,
+            color = PrimaryTeal,
+            shape = RoundedCornerShape(Dimensions.cornerRadiusSmall)
+        )
 
-@Preview(
-    showBackground = true,
-)
+    if (imageBitmap != null) {
+        Image(
+            bitmap = imageBitmap,
+            contentDescription = description,
+            modifier = imageModifier,
+            contentScale = ContentScale.Crop,
+        )
+    } else {
+        Image(
+            painter = painterResource(Res.drawable.kwalaexpress2),
+            contentDescription = description,
+            modifier = imageModifier,
+            contentScale = ContentScale.Crop,
+        )
+    }
+}
+
+@Preview(showBackground = true)
 @Composable
 fun TopicRowPreview() {
     MockupTheme {

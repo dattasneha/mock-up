@@ -1,25 +1,25 @@
 package com.snehadatta.mockup.home.presentation
 
 import androidx.compose.foundation.layout.Arrangement
-import com.snehadatta.mockup.home.presentation.components.BottomBar
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.snehadatta.mockup.home.presentation.components.BottomBar
 import com.snehadatta.mockup.home.presentation.components.HomeScreenTopBar
 import com.snehadatta.mockup.home.presentation.components.TopBar
 import com.snehadatta.mockup.home.presentation.components.TopicColumn
+import com.snehadatta.mockup.home.presentation.model.UserStats
+import com.snehadatta.mockup.ui.components.ErrorState
+import com.snehadatta.mockup.ui.components.LoadingState
+import com.snehadatta.mockup.ui.theme.Dimensions
 import com.snehadatta.mockup.ui.theme.MockupTheme
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -29,52 +29,28 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
+        ) {
             TopBar(
                 modifier = Modifier.fillMaxWidth(),
-                kp = 0,
-                coins = 5000,
-                diamonds = 10,
+                userStats = UserStats(
+                    kp = 0,
+                    coins = 5000,
+                    diamonds = 10
+                ),
                 onFreeClick = {},
-                onSettingsClick = {},
-            )
-            HomeScreenTopBar(
-                modifier = Modifier.padding(vertical = 4.dp)
+                onSettingsClick = {}
             )
 
-            when {
-                uiState.isLoading -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        CircularProgressIndicator()
-                    }
-                }
-                uiState.error != null -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = uiState.error ?: "Unknown error",
-                            color = Color.Red
-                        )
-                    }
-                }
-                else -> {
-                    TopicColumn(
-                        topicZone = uiState.topicZones
-                    )
-                }
-            }
+            HomeScreenTopBar(
+                modifier = Modifier.padding(vertical = Dimensions.spacingSmall)
+            )
+
+            HomeContent(uiState = uiState)
         }
 
         BottomBar(
@@ -85,13 +61,19 @@ fun HomeScreen(
     }
 }
 
-@Preview(
-    showBackground = true,
-)
+@Composable
+private fun HomeContent(uiState: HomeUiState) {
+    when {
+        uiState.isLoading -> LoadingState()
+        uiState.error != null -> ErrorState(message = uiState.error)
+        else -> TopicColumn(topicZone = uiState.topicZones)
+    }
+}
+
+@Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview() {
     MockupTheme {
-
         HomeScreen()
 
     }

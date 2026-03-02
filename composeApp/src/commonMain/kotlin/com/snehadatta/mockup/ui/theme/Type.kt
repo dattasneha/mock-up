@@ -1,16 +1,14 @@
 package com.snehadatta.mockup.ui.theme
 
-import myapplication.composeapp.generated.resources.Play_Regular
-import myapplication.composeapp.generated.resources.Res
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import myapplication.composeapp.generated.resources.Play_Regular
+import myapplication.composeapp.generated.resources.Res
 import org.jetbrains.compose.resources.Font
-
 
 @Composable
 fun appFontFamily(): FontFamily {
@@ -27,6 +25,7 @@ fun appTypography(): Typography {
     val fontFamily = appFontFamily()
 
     return Typography(
+        // Display styles - largest text
         displayLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
@@ -38,6 +37,7 @@ fun appTypography(): Typography {
             fontSize = 34.sp
         ),
 
+        // Headline styles - page titles
         headlineLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
@@ -54,6 +54,7 @@ fun appTypography(): Typography {
             fontSize = 20.sp
         ),
 
+        // Title styles - section headings
         titleLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.SemiBold,
@@ -70,6 +71,7 @@ fun appTypography(): Typography {
             fontSize = 14.sp
         ),
 
+        // Body styles - main content
         bodyLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.Normal,
@@ -85,6 +87,8 @@ fun appTypography(): Typography {
             fontWeight = FontWeight.Normal,
             fontSize = 12.sp
         ),
+
+        // Label styles - buttons, tabs
         labelLarge = TextStyle(
             fontFamily = fontFamily,
             fontWeight = FontWeight.ExtraBold,
